@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Site Interativo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    .word {
+      cursor: pointer;
+      margin: 10px;
+      padding: 15px 30px;
+      background-color: #333;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.5rem;
+      transition: background-color 0.3s;
+    }
+
+    .word:hover {
+      background-color: #555;
+    }
+
+    #result {
+      margin-top: 30px;
+      font-size: 1.2rem;
+      color: #0f0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Clique em uma palavra</h1>
+  <button class="word" onclick="showMessage('laurete')">laurete</button>
+  <button class="word" onclick="showMessage('cauazina')">cauazina</button>
+  <button class="word" onclick="showMessage('turerrombado')">turerrombado</button>
+  
+  <div id="result"></div>
+
+  <script>
+    function showMessage(word) {
+      const messages = {
+        laurete: "deve 500 reais pro lipe",
+        cauazina: "só vai pra faculdade bater ponto",
+        turerrombado: "caga escremento e come depois"
+      };
+      document.getElementById("result").innerText = messages[word];
+    }
+  </script>
+</body>
+</html>
